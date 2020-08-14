@@ -1,1 +1,1 @@
-web:gunicorn sciencehelper:app
+web: gunicorn wsgi:app
