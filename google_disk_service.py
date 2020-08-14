@@ -13,6 +13,7 @@ def init_google_drive():
 
 
 def getDocuments():
+
     credentials, service = init_google_drive()
     results = service.files().list(pageSize=10,
                                    fields="nextPageToken, files(id, name, mimeType)").execute()
