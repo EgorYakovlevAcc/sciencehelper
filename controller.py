@@ -4,12 +4,12 @@ from flask import render_template
 controller = Blueprint('controller', __name__)
 
 
-@main_router.route('/')
-@main_router.route('/index')
+@controller.route('/')
+@controller.route('/index')
 def get_index():
     return render_template("index.html")
 
 
-@main_router.route('/workplace')
+@controller.route('/workplace')
 def get_workplace():
     return render_template("workplace.html")
